@@ -1,0 +1,31 @@
+{
+  "name": "@purtuga/project-generate",
+  "version": "0.9.0",
+  "description": "Add private custom generators to any project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "generate",
+    "scaffold",
+    "templates"
+  ],
+  "bin": {
+    "project-generate": "./bin/cli.js"
+  },
+  "author": "Paul Tavares",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "esm": {
+    "mode": "auto"
+  },
+  "dependencies": {
+    "esm": "^3.0.84",
+    "find-up": "^3.0.0",
+    "yeoman-environment": "^2.3.4",
+    "yeoman-generator": "^3.1.1"
+  }
+}
