@@ -23,7 +23,6 @@ class Gen extends Generator {
     //          _%>     ‘Whitespace Slurping’ ending tag, removes all whitespace after it
     //----------------------------------------------------------------
 
-
     //-- Yeoman HOOK
     // initializing(){}
 
