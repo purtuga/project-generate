@@ -1,6 +1,6 @@
 {
   "name": "@purtuga/project-generate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add private custom generators to any project",
   "main": "index.js",
   "scripts": {
