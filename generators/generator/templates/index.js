@@ -34,6 +34,8 @@ class NewThing extends Generator {
     writing() {
         // Copy everything in `templates` to the destination
         // During copy, all answers are available under `props`
+        // For More on mem-fs, See:
+        // https://github.com/sboudrias/mem-fs-editor#mem-fs-editor---
         this.fs.copyTpl(
             this.templatePath(),
             this.destinationPath(),

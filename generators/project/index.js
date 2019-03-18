@@ -9,8 +9,8 @@ class Project extends Generator {
             {
                 type: 'input',
                 name: 'name',
-                message: 'Project name',
-                default: this.appname // Default to current folder name
+                message: 'Project name (should be valid npm name)',
+                default: this.appname.replace(/ /g, "-") // Default to current folder name
             }
         ]);
     }
@@ -30,12 +30,11 @@ class Project extends Generator {
             "_gitignore",
             "_package.json"
         ].forEach(fileName => {
-            this.fs.copyTpl(
-                this.templatePath(fileName),
+            this.fs.move(
+                this.destinationPath(fileName),
                 this.destinationPath(
                     `${fileName.endsWith("package.json") ? "" : "."}${fileName.substr(1)}`
-                ),
-                this
+                )
             );
         });
     }
