@@ -23,6 +23,11 @@ class Gen extends Generator {
     //          _%>     ‘Whitespace Slurping’ ending tag, removes all whitespace after it
     //----------------------------------------------------------------
 
+    constructor(...args) {
+        super(...args);
+        this.option("here", {default: false, type: Boolean});
+    }
+
     //-- Yeoman HOOK
     // initializing(){}
 
@@ -48,13 +53,21 @@ class Gen extends Generator {
 
     //-- Yeoman HOOK
     async writing() {
+        let outputRootDir = process.cwd();
         const packageJson = await getProjectPackageJson();
+
+        // If we found a package.json, then use its root in creating the generator
+        if (!this.options.here && packageJson && packageJson.name && packageJson.getGeneratorsDir) {
+            outputRootDir = packageJson.getGeneratorsDir();
+        }
+
+        this.log(`Writing to: ${outputRootDir}`);
 
         // Copy everything in `templates` to the destination
         // During copy, all answers are available under `props`
         this.fs.copyTpl(
             this.templatePath(),
-            this.destinationPath(path.join(packageJson.getGeneratorsDir(), this.props.name)),
+            this.destinationPath(path.join(outputRootDir, this.props.name)),
             this
         );
     }
