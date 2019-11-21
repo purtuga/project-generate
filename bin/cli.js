@@ -1,4 +1,4 @@
-#!/usr/bin/env node -r esm
+#!/usr/bin/env node
 
 require = require("esm")(module);
 const readline = require('readline');
