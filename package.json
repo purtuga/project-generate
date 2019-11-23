@@ -16,6 +16,9 @@
   },
   "author": "Paul Tavares",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/purtuga/project-generate.git"
+  },
   "engines": {
     "node": ">=8.0.0"
   },
@@ -23,9 +26,9 @@
     "mode": "auto"
   },
   "dependencies": {
-    "esm": "^3.0.84",
+    "esm": "^3.2.25",
     "find-up": "^3.0.0",
-    "yeoman-environment": "^2.3.4",
+    "yeoman-environment": "^2.6.0",
     "yeoman-generator": "^3.1.1"
   }
 }
