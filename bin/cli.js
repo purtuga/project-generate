@@ -6,13 +6,14 @@ const run = require("../lib/run.js").run;
 const {find, findByName } = require("../lib/find.js");
 const CWD = process.env.INIT_CWD || process.cwd();
 
+const [, , generatorName] = process.argv;
 
 // If no generator name, then show list
 let runInstance;
 if (!process.argv[2]) {
     runInstance = showGeneratorList()
 } else {
-    runInstance = runRequestedGenerator(process.argv[2]);
+    runInstance = runRequestedGenerator(generatorName);
 }
 
 runInstance

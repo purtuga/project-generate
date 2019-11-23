@@ -32,7 +32,7 @@ This utility looks for generators stored in directory named `generators`. This u
 - This library's directory (picks up out-of-box generators)
 
 
-Each generator is stored in a new directory - the directory name is used as the generator name. 
+Each generator is stored in a directory - the directory name is used as the generator name.
 
 This tool provides some default generators which are opinionated to how I currently create projects. They are:
 
@@ -41,7 +41,7 @@ This tool provides some default generators which are opinionated to how I curren
 
 
 ### `generator` Usage
-This generator will scaffold out the structure for a new generator. It will prompt for the name and will output all files to the current project (determined by closest `package.json` file) under a directory named `generators`. If not running under a project, the files will be output to the current folder (`cwd`).
+This generator will scaffold out the structure for a new generator. It will prompt for the name and will output all files to the current project (determined by closest `package.json` file) under a directory named `generators`. If not running under a project, the files will be output to the current folder (`cwd`). 
 
 
 ## License

@@ -68,7 +68,10 @@ class Gen extends Generator {
         this.fs.copyTpl(
             this.templatePath(),
             this.destinationPath(path.join(outputRootDir, this.props.name)),
-            this
+            this,
+            // The copying of this template uses a custom delimiter (`<? ?>`) in order
+            // to preserve the output
+            { delimiter: "?" }
         );
     }
 
